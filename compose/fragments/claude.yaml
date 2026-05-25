@@ -2,3 +2,5 @@ services:
   dev:
     volumes:
       - ${DOTFILES_DIR}/claude:/root/.claude:z
+    environment:
+      - CLAUDE_CONFIG_DIR=/root/.claude
