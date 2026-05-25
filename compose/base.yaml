@@ -1,0 +1,8 @@
+services:
+  dev:
+    command: sleep infinity
+    working_dir: /workspace
+    security_opt:
+      - label=disable
+    stdin_open: true
+    tty: true

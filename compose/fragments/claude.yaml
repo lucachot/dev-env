@@ -1,0 +1,4 @@
+services:
+  dev:
+    volumes:
+      - ${DOTFILES_DIR}/claude:/root/.claude:z

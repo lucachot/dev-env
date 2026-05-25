@@ -1,0 +1,14 @@
+FROM registry.fedoraproject.org/fedora:latest
+
+# Install core tools, Neovim, and Fedora's compiler toolchain
+RUN dnf update -y && dnf install -y \
+    neovim \
+    git \
+    tmux \
+    gcc \
+    gcc-c++ \
+    make \
+    && dnf clean all
+
+WORKDIR /workspace
+CMD ["/bin/bash"]

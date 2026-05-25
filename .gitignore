@@ -1,0 +1,2 @@
+# Project .env files contain machine-specific paths — not portable
+**/.env

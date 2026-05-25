@@ -1,0 +1,12 @@
+FROM localhost/local/dev-base:latest
+
+# Ensure unzip or minor utilities are present if the scripts need them
+RUN dnf install -y unzip && dnf clean all
+
+# 1. Install Claude Code via official script
+RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# 2. Install Antigravity CLI via official script
+RUN curl -fsSL https://antigravity.google/cli/install.sh | bash
+
+CMD ["/bin/bash"]

@@ -1,0 +1,11 @@
+# Inherit from the CLI layer
+FROM localhost/local/dev-cli:latest
+
+# Install LaTeX rendering engine and common packages
+RUN dnf install -y \
+    texlive-scheme-medium \
+    texlive-latex \
+    latexmk \
+    && dnf clean all
+
+CMD ["/bin/bash"]

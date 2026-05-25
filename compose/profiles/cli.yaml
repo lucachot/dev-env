@@ -1,0 +1,9 @@
+include:
+  - path: ../base.yaml
+  - path: ../fragments/git-ssh.yaml
+  - path: ../fragments/nvim.yaml
+  - path: ../fragments/claude.yaml
+
+services:
+  dev:
+    image: localhost/local/dev-cli:latest
