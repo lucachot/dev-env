@@ -6,4 +6,4 @@ include:
 
 services:
   dev:
-    image: localhost/local/dev-cli:latest
+    image: localhost/local/dev-latex:latest
