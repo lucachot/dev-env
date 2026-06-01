@@ -1,8 +1,12 @@
 services:
   dev:
+    image: ${IMAGE}
     command: sleep infinity
+    container_name: dev-env
     working_dir: /workspace
     security_opt:
       - label=disable
     stdin_open: true
     tty: true
+    volumes:
+      - .:/workspace:Z
